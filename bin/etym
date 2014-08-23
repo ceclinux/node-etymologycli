@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+
+if (!process.argv[2]) {
+  console.log('etym ~ ' + require('../package').version.green);
+  console.log('To get the source of the word in command line'.grey);
+  console.log('  $ '.cyan + 'etym word');
+  return;
+}
+
+var etym = require('..');
+etym(process.argv.slice(2).join(' '));

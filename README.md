@@ -1,4 +1,4 @@
-node-etymologycli ![](https://badge.fury.io/js/etymology-cli.png)
+node-etymologycli ![](https://d25lcipzij17d.cloudfront.net/badge.png?id=js&type=3d&v=0.0.4)
 ---
 
 **A command line tool of http://www.etymonline.com/**

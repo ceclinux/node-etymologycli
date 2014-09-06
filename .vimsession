@@ -8,12 +8,11 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +13 index.js
-badd +11 printcolor.js
+badd +0 package.json
 argglobal
 silent! argdel *
-argadd index.js
-edit index.js
+argadd package.json
+edit package.json
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -28,13 +27,13 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-11
+2
 normal! zo
-let s:l = 13 - ((12 * winheight(0) + 14) / 28)
+let s:l = 3 - ((2 * winheight(0) + 14) / 29)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-13
+3
 normal! 0
 tabnext 1
 if exists('s:wipebuf')

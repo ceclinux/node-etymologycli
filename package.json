@@ -1,27 +1,27 @@
 {
-  "name": "etymology-cli",
-  "version": "0.0.1",
-  "description": "To get the source of the words from http://www.etymonline.com/",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:ceclinux/etymology.git"
-  },
-  "author": "celinux <src655@gmail.com>",
-  "license": "MIT",
-  "bin": {
-    "fanyi": "./bin/etym"
-  },
-  "keywords": [
-    "etymology"
-  ],
-  "engines": {
-    "node": ">= 0.8.1"
-  },
-  "readmeFilename" : "README.md",
-  "dependencies"   : {
-    "request"      : "^2.36.0",
-    "jsdom"        : "*",
-    "colorful"     : "*"
-  }
+    "name"        : "etymology-cli",
+    "version"     : "0.0.4",
+    "description" : "To get the source of the words from http : //www.etymonline.com/",
+    "main"        : "index.js",
+    "repository"  : {
+        "type"    : "git",
+        "url"     : "git@github.com                           : ceclinux/node-etymologycli.git"
+    },
+    "author": "ceclinux <src655@gmail.com>",
+    "license": "MIT",
+    "bin": {
+        "etym": "./bin/etym"
+    },
+    "keywords": [
+        "etymology"
+    ],
+    "engines": {
+        "node": ">= 0.8.1"
+    },
+    "readmeFilename" : "README.md",
+    "dependencies"   : {
+        "request"      : "^2.36.0",
+        "jsdom"        : "*",
+        "colorful"     : "*"
+    }
 }

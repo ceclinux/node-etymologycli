@@ -10,7 +10,7 @@ endif
 set shortmess=aoO
 badd +1 love
 badd +1 alien
-badd +78 ~/Others/etymology/printcolor.js
+badd +39 ~/Others/etymology/printcolor.js
 badd +3 etym
 argglobal
 silent! argdel *
@@ -33,17 +33,19 @@ setlocal fen
 normal! zo
 31
 normal! zo
+33
+normal! zo
 60
 normal! zo
 73
 normal! zo
 76
 normal! zo
-let s:l = 78 - ((17 * winheight(0) + 14) / 28)
+let s:l = 39 - ((13 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-78
+39
 normal! 0
 tabnext 1
 if exists('s:wipebuf')

@@ -36,7 +36,7 @@ module.exports = function  (data) {
         d += data[i].to.italic.blue.color;
       }
     }else if(color == 'green'){
-      d += data[i].to.underline.green.color;
+      d += data[i].to.underline.bold.green.color;
     }else if(color == 'magenta'){
       if (flag) {
         d += data[i].to.underline.magenta.color;

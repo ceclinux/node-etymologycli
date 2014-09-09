@@ -1,53 +1,25 @@
 require('colorful').colorful()
-//var tomagenta = function (data) {
-//var dataarray = data.split(/"/);
-//var colordata = '';
-//for (var i = 0; i < dataarray.length; i++) {
-//if (i%2==0) {
-//colordata += dataarray[i];
-//}else{
-//colordata += (("\"" + dataarray[i] + "\"").to.magenta.color)
-//}
-//};
-//return colordata;
-//}
-
-//module.exports = function(data) {
-//var bluedata = '';
-//var dataarray = data.split(/\(|\)/);
-//for (var i = 0; i < dataarray.length; i++) {
-//if (i%2==0) {
-//bluedata += tomagenta(dataarray[i]);
-//}else{
-//bluedata += ((tomagenta("(" + dataarray[i] + ")")).to.italic.color)
-//}
-//};
-//return bluedata;
-//}
+//是否underline
 var flag = 0;
-module.exports = function  (data) {
-  var d = '';
-  for (var i = 0; i < data.length; i++) {
-    var color = getcolor(getpar(data[i]));
+module.exports = function  (d) {
+  var colorword = '';
+  for (var i = 0; i < d.length; i++) {
+    var color = getcolor(getpair(d[i]));
+    var data = d[i];
     if(color == 'italic' ){
-      if (flag) {
-        d += data[i].to.italic.underline.blue.color;
-      }else{
-        d += data[i].to.italic.blue.color;
-      }
+      data = data.to.italic.blue.color;
     }else if(color == 'green'){
-      d += data[i].to.underline.bold.green.color;
+      colorword += data.to.underline.bold.green.color;
+      continue;
     }else if(color == 'magenta'){
-      if (flag) {
-        d += data[i].to.underline.magenta.color;
-      }else{
-        d += data[i].to.magenta.color;
-      }
-    }else{
-      d += data[i];
+      data = data.to.magenta.color;
     }
+    if(flag){
+      data = data.to.underline;
+    }
+    colorword += data;
   };
-  return d;
+  return colorword;
 }
 
 var stack = '';
@@ -56,7 +28,7 @@ var isstackempty = function  () {
   return stack == '';
 }
 
-var getpar = function (c){
+var getpair = function (c){
   if((c == ')'&&stack.slice(-1) == '(')||(c == ']' && stack.slice(-1) == '[')||(c == stack.slice(-1) && c == '\"')){
     stack = stack.slice(0, -1);
     return c;

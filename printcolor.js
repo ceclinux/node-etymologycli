@@ -1,4 +1,5 @@
 require('colorful').colorful()
+require('./stack')
 //是否underline
 var flag = 0;
 module.exports = function  (d) {
@@ -24,25 +25,6 @@ module.exports = function  (d) {
     colorword += data;
   };
   return colorword;
-}
-
-var stack = '';
-
-var isstackempty = function  () {
-  return stack == '';
-}
-
-var getpair = function (c){
-  if((c == ')'&&stack.slice(-1) == '(')||(c == ']' && stack.slice(-1) == '[')||(c == stack.slice(-1) && c == '\"')){
-    stack = stack.slice(0, -1);
-    return c;
-  }else if(c == '[' || c == '(' || c == '\"'){
-    stack += c;
-  }
-  if(!isstackempty()){
-    return stack.slice(-1);
-  }
-  return '';
 }
 
 var getcolor = function  (c) {

@@ -9,14 +9,13 @@ module.exports = function  (d) {
     switch(color){
       case 'italic':
         data = data.to.italic.blue.color;
-      break;
       case 'green':
         colorword += data.to.underline.bold.green.color;
       continue;
-      break;
-      case 'magenta':
+      case  'magenta':
         data = data.to.magenta.color;
-      break;
+      default:
+        ;
     }
     if(flag){
       data = data.to.underline;

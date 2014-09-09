@@ -8,7 +8,7 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +7 printcolor.js
+badd +15 printcolor.js
 argglobal
 silent! argdel *
 argadd printcolor.js
@@ -31,15 +31,17 @@ setlocal fen
 normal! zo
 7
 normal! zo
-45
+10
 normal! zo
-48
+49
 normal! zo
-let s:l = 7 - ((5 * winheight(0) + 5) / 11)
+52
+normal! zo
+let s:l = 15 - ((13 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-7
+15
 normal! 0
 tabnext 1
 if exists('s:wipebuf')

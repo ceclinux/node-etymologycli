@@ -1,4 +1,4 @@
-node-etymologycli ![](https://d25lcipzij17d.cloudfront.net/badge.png?id=js&type=3d&v=0.0.4)
+node-etymologycli ![](https://d25lcipzij17d.cloudfront.net/badge.png?id=js&type=3d&v=0.0.5)
 ---
 
 **A command line tool of http://www.etymonline.com/**
@@ -8,6 +8,10 @@ node-etymologycli ![](https://d25lcipzij17d.cloudfront.net/badge.png?id=js&type=
 ##install##
 
 ```npm install etymology-cli -g```
+
+如果你是**Arch Linux**用户
+
+```yaourt -S nodejs-etymologycli```
 
 ##Usage
 

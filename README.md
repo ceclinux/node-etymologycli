@@ -18,3 +18,7 @@ node-etymologycli ![](https://d25lcipzij17d.cloudfront.net/badge.png?id=js&type=
 ```etym words```
 
 ![](image/output.gif)
+
+##License
+
+MIT

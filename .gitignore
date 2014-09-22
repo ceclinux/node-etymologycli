@@ -21,3 +21,4 @@ node_modules/
 .yml
 test/
 .vimsession
+./npm-debug.log

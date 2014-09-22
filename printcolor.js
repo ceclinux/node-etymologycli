@@ -1,21 +1,28 @@
 require('colorful').colorful()
 require('./stack')
 //是否underline
+var NORMAL = 0
+//()
+var INPARE = 1
+//[]
+var INBRACKET = 2
+//"
+var INQUOTA = 3
 var flag = 0;
 module.exports = function  (d) {
   var colorword = '';
   for (var i = 0; i < d.length; i++) {
-    var color = getcolor(getpair(d[i]));
+    var type = gettype(getpair(d[i]));
     var data = d[i];
-    switch(color){
-      case 'italic':
+    switch(type){
+      case INPARE:
         data = data.to.italic.blue.color;
       break;
-      case 'green':
+      case INBRACKET:
         colorword += data.to.underline.bold.green.color;
       continue;
       break;
-      case 'magenta':
+      case INQUOTA:
         data = data.to.magenta.color;
       break;
     }
@@ -27,20 +34,20 @@ module.exports = function  (d) {
   return colorword;
 }
 
-var getcolor = function  (c) {
+var gettype = function  (c) {
   if(c == '(' || c== ')'){
-    return "italic";
+    return INPARE;
   }else if(c == '[' || c == ']'){
     if( c == '['){
       flag = 1;
     }else{
       flag = 0;
     }
-    return "green";
+    return INBRACKET;
   }else if(c == '\"'){
-    return "magenta";
+    return INQUOTA;
   }else{
-    return "white";
+    return NORMAL;
   }
 }
 

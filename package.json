@@ -1,6 +1,6 @@
 {
     "name"        : "etymology-cli",
-    "version"     : "0.0.8",
+    "version"     : "0.0.9",
     "description" : "To get the source of the words from http : //www.etymonline.com/",
     "main"        : "index.js",
     "repository"  : {
@@ -15,8 +15,8 @@
     "keywords": [
         "etymology"
     ],
-    "engines": {
-        "node": ">= 0.8.1"
+    "engines"  : {
+        "node" : ">= 0.8.1"
     },
     "readmeFilename" : "README.md",
     "dependencies"   : {

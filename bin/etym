@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
+require('colorful').toxic();
+
 if (!process.argv[2]) {
   console.log('etym ~ ' + require('../package').version.green);
-  console.log('To get the source of the word in command line'.grey);
+  console.log('To get the origin of the word in command line'.grey);
   console.log('  $ '.cyan + 'etym word');
   return;
 }

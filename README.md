@@ -11,7 +11,7 @@ node-etymologycli ![](https://d25lcipzij17d.cloudfront.net/badge.png?id=js&type=
 
 ##Usage
 
-```etym words```
+```etym word```
 
 ![](https://img.vim-cn.com/99/3aea3dc757093aa40d4ce7de20a9a4f665af67.png)
 
